@@ -1,0 +1,18 @@
+info
+insert
+Иван 100 200 180 ABCDEF GERMANY 1.1 2.2 3 Центр
+insert
+Петр 150 300 170 QWERTY JAPAN 4.4 5.5 6 Район
+show
+update 1
+Алексей 111 222 190 ZXCVBN GERMANY 7.7 8.8 9 Остров
+insert
+Мария 99 150 160 ASDFGH FRANCE 9.9 8.8 7 Крепость
+remove_key 2
+remove_lower
+Игорь 120 240 175 POIUYT JAPAN 1.1 1.1 1 Башня
+show
+printuniquenationality
+printfieldascendingpassportid
+save
+exit
