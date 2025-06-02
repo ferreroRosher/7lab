@@ -1,4 +1,4 @@
-package ru.se.ifmo.db.entity;
+package model;
 
 /**
  * Represents a persistent entity with a unique identifier.

@@ -1,4 +1,4 @@
-package ru.se.ifmo.db;
+package db;
 
 /**
  * Defines a contract for encoding strings (for example, passwords) and verifying

@@ -1,7 +1,6 @@
-package ru.se.ifmo.db;
+package db;
 
-
-import ru.se.ifmo.db.entity.Entity;
+import java.model.Entity;
 import ru.se.ifmo.db.entity.User;
 
 import java.time.LocalDate;

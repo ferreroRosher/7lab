@@ -1,6 +1,5 @@
-package ru.se.ifmo.db;
+package db;
 
-import jakarta.inject.Inject;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -11,7 +10,6 @@ import java.util.Properties;
 public class SQLConnectionController {
     private Connection connection;
 
-    @Inject
     public SQLConnectionController() {
         Properties properties = new Properties();
         try {

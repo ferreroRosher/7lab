@@ -1,4 +1,4 @@
-package ru.se.ifmo.db;
+package db;
 
 /**
  * Handles persistence operations for a {@link CollectionManager}.

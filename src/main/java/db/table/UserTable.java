@@ -1,8 +1,8 @@
-package ru.se.ifmo.db.table;
+package db.table;
 
 import jakarta.inject.Inject;
 import ru.se.ifmo.db.DatabaseUtils;
-import ru.se.ifmo.db.entity.User;
+import model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

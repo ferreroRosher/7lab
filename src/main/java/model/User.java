@@ -1,4 +1,4 @@
-package ru.se.ifmo.db.entity;
+package model;
 
 import java.util.Objects;
 
