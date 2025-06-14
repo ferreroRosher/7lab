@@ -26,6 +26,9 @@ tasks.named<ShadowJar>("shadowJar") {
     archiveClassifier.set("")
     // Опционально: объединяем файлы в META-INF/services
     mergeServiceFiles()
+    manifest {
+        attributes["Main-Class"] = "ru.se.ifmo.lab.App"
+    }
 }
 
 // Чтобы при `./gradlew build` собирался shadow JAR
