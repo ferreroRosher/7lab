@@ -1,5 +1,7 @@
 package ru.se.ifmo.lab;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.se.ifmo.cli.Application;
 import ru.se.ifmo.cli.AuthenticationController;
 import ru.se.ifmo.cli.CommandsScanner;
@@ -17,7 +19,6 @@ import ru.se.ifmo.lab.command.PrintUniqueNationalityCommand;
 import ru.se.ifmo.lab.command.RemoveGreaterKeyCommand;
 import ru.se.ifmo.lab.command.RemoveKeyCommand;
 import ru.se.ifmo.lab.command.RemoveLowerCommand;
-import ru.se.ifmo.lab.command.SaveCommand;
 import ru.se.ifmo.lab.command.ShowCommand;
 import ru.se.ifmo.lab.command.UpdateIdCommand;
 import ru.se.ifmo.lab.db.PersonCollectionManager;
@@ -25,6 +26,7 @@ import ru.se.ifmo.lab.db.PersonDatabaseManager;
 import ru.se.ifmo.lab.db.PersonTable;
 
 public class App extends Application {
+    private static final Logger log = LoggerFactory.getLogger(App.class);
     private PersonCollectionManager collectionManager;
     private PersonDatabaseManager databaseManager;
 
@@ -50,7 +52,7 @@ public class App extends Application {
         project.getCommands().register("remove_greater", RemoveGreaterKeyCommand.class);
         project.getCommands().register("remove_key", RemoveKeyCommand.class);
         project.getCommands().register("remove_lower", RemoveLowerCommand.class);
-        project.getCommands().register("save", SaveCommand.class);
+//        project.getCommands().register("save", SaveCommand.class);
         project.getCommands().register("show", ShowCommand.class);
         project.getCommands().register("update", UpdateIdCommand.class);
     }
@@ -88,9 +90,13 @@ public class App extends Application {
             throw new RuntimeException(exception);
         }
         while (true) {
-            System.out.print("Enter command: ");
-            String[] command = scanner.nextCommand().split(" ");
-            execute(command);
+            try {
+                System.out.print("Enter command: ");
+                String[] command = scanner.nextCommand().split(" ");
+                execute(command);
+            } catch (Exception exception) {
+                log.error("Something went wrong", exception);
+            }
         }
     }
 }

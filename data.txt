@@ -1,0 +1,17 @@
+insert 123
+
+Alexander Ivanov
+123
+456.78
+180
+2000-04-25T10:00:00+03:00
+AB1234567
+JAPAN
+1.1
+2.2
+3
+Tokyo
+
+show
+
+help
